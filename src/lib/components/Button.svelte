@@ -1,8 +1,17 @@
 <script lang="ts">
-    let {children, ...props}: Props = $props()
+    let {children, ...props} = $props();
+
+    async function checkout() {
+        const response = await fetch('/api/checkout', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+    }
 </script>
 
-<button {...props}>
+<button onclick={checkout}  {...props}>
     {@render children()}
 </button>
 
