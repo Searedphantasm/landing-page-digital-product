@@ -48,7 +48,7 @@
     </h2>
     <div class="chapter-container">
         <ul>
-            {#each chapters as chapter}
+            {#each chapters as chapter,index (index)}
                 <li>
                     <button class="chapter-title"
                             aria-controls={`chapter-info-${chapter.number}`}
@@ -109,5 +109,53 @@
         color: white;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
         0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 768px) {
+        .chapter-preview {
+            padding: 40px 20px;
+            margin-left: 0;
+            margin-right: 0;
+            max-width: 100%;
+        }
+
+        .chapter-container {
+            flex-direction: column;
+        }
+
+        .chapter-container ul, .chapter-info {
+            width: 100%;
+        }
+
+        .chapter-title {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .chapter-info h3 {
+            font-size: 18px;
+        }
+
+        .chapter-info p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .chapter-preview {
+            padding: 20px 10px;
+        }
+
+        .chapter-title {
+            font-size: 12px;
+        }
+
+        .chapter-info h3 {
+            font-size: 16px;
+        }
+
+        .chapter-info p {
+            font-size: 12px;
+        }
     }
 </style>

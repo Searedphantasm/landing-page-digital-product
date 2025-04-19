@@ -40,7 +40,6 @@
     </div>
 </section>
 
-
 <style>
     .hero {
         display: flex;
@@ -82,5 +81,31 @@
         bottom: 0;
         right: 52%;
         transform: translateY(25%);
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-showcase {
+            padding: 50px 16px;
+            width: 100%;
+        }
+
+        .hero-text {
+            padding: 50px 16px;
+            width: 100%;
+        }
+
+        .book-cover, .phone-cover {
+            position: relative;
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            transform: none;
+        }
     }
 </style>

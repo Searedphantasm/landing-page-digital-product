@@ -46,7 +46,7 @@
         Frequently Asked Questions
     </h2>
     <div class="faq-container">
-        {#each faqs as fq, index}
+        {#each faqs as fq, index (index)}
             <FaqItem fq={fq} isExpanded={index === questionCurrentlyExpanded} onclick={() => setExpanded(index)} />
         {/each}
     </div>
@@ -80,5 +80,24 @@
 
     .additional-info a {
         text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .faq-section {
+            padding: 20px;
+        }
+        .mb-l {
+            margin-bottom: 20px;
+        }
+        .mt-s {
+            margin-top: 10px;
+        }
+        .additional-info p, .additional-info a {
+            font-size: 14px;
+        }
+        .telegram-icon {
+            width: 16px;
+            height: 16px;
+        }
     }
 </style>

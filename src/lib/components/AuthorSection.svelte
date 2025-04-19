@@ -41,7 +41,30 @@
         width: 55%;
     }
 
-    /* .author-text p:not(:last-of-type) {
-      margin-bottom: 8px;
-    } */
+    .author-text p {
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .author-section {
+            padding: 40px 20px;
+            margin-left: 0;
+            margin-right: 0;
+            max-width: 100%;
+        }
+
+        .author-container {
+            flex-direction: column;
+        }
+
+        .author-text {
+            width: 100%;
+        }
+
+        .author-container img {
+            width: 80%;
+            margin: 20px auto 0;
+            display: block;
+        }
+    }
 </style>

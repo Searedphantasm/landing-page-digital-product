@@ -1,11 +1,10 @@
 <script lang="ts">
     import chevron from '$assets/icons/chevron-down.svg'
 
-    let { fq, isExpanded,...props } = $props()
+    let { fq, isExpanded, ...props } = $props()
 </script>
 
-
-<button class="container" class:container-expanded={isExpanded} {...props} >
+<button class="container" class:container-expanded={isExpanded} {...props}>
     <div class="question-and-answer">
         <p class="question mb-s">
             {fq.question}
@@ -16,7 +15,6 @@
     </div>
     <img src={chevron} alt="chevron icon" />
 </button>
-
 
 <style>
     .container {
@@ -29,7 +27,7 @@
     }
 
     .question-and-answer {
-        padding-right: 150px;
+        padding-right: 5vw; /* Adjusted from 150px */
         flex-grow: 1;
     }
 
